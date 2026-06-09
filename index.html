@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COOKIEVERSE: Memórias de um Portal Alienígena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="space-shell">
+    <div class="starfield"></div>
+    <div class="nebula-layer"></div>
+    <div class="meteor meteor-1"></div>
+    <div class="meteor meteor-2"></div>
+    <div class="meteor meteor-3"></div>
+    <div class="trace-ring"></div>
+  </div>
+
+  <div class="console-shell">
+    <header class="top-bar glass-panel">
+      <div class="brand">
+        <span class="brand-mark">☌</span>
+        <div>
+          <h1>COOKIEVERSE</h1>
+          <p>Memórias de um Portal Alienígena</p>
+        </div>
+      </div>
+      <div class="status-chip">
+        <span>SITUAÇÃO</span>
+        <strong id="portalStatus">ADORMECIDO</strong>
+      </div>
+    </header>
+
+    <section class="portal-stage">
+      <div class="portal-shell glass-panel">
+        <div class="portal-core" id="portalCore">
+          <div class="portal-aura"></div>
+          <div class="portal-inner"></div>
+          <div class="portal-band band-1"></div>
+          <div class="portal-band band-2"></div>
+          <span class="portal-title">PORTAL DE MEMÓRIAS</span>
+        </div>
+      </div>
+      <div class="portal-effects" id="portalEffects"></div>
+    </section>
+
+    <main class="stage-grid">
+      <section class="memory-panel glass-panel">
+        <div class="panel-header">
+          <h2>Grave sua Memória</h2>
+          <p>Escreva para o portal vivo e deixe a nave lembrar de você através dos cookies.</p>
+        </div>
+        <form id="memoryForm">
+          <label for="explorerName">Nome do Explorador</label>
+          <input id="explorerName" type="text" placeholder="Ex: Lyra Nova" required>
+
+          <label for="planetChoice">Planeta Escolhido</label>
+          <select id="planetChoice" required>
+            <option value="">Selecione um planeta</option>
+            <option value="Astral Delta">Astral Delta</option>
+            <option value="Orbe Selenita">Orbe Selenita</option>
+            <option value="Galáxia Arco-Íris">Galáxia Arco-Íris</option>
+            <option value="Nébula Autômata">Nébula Autômata</option>
+            <option value="Torre Quântica">Torre Quântica</option>
+          </select>
+
+          <label for="auraColor">Cor da Aura</label>
+          <input id="auraColor" type="color" value="#7b00ff">
+
+          <label for="alienClass">Classe Alienígena</label>
+          <select id="alienClass" required>
+            <option value="">Selecione sua classe</option>
+            <option value="Viajante">Viajante</option>
+            <option value="Hacker Cósmico">Hacker Cósmico</option>
+            <option value="Guardião">Guardião</option>
+            <option value="Mutante Estelar">Mutante Estelar</option>
+          </select>
+
+          <label for="memoryMessage">Mensagem para o Portal</label>
+          <textarea id="memoryMessage" rows="4" placeholder="Deixe sua mensagem para o portal..." required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="neon-button">Enviar Memória</button>
+            <button type="button" id="resetCookies" class="neon-button ghost">Apagar Cookies</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="cookie-log glass-panel">
+        <div class="log-header">
+          <h2>Painel de Memórias</h2>
+          <span>Cookies salvos</span>
+        </div>
+        <div id="cookiePanel" class="cookie-list"></div>
+      </section>
+    </main>
+
+    <footer class="footer-bar glass-panel">
+      <div class="footer-status">
+        <span>Conexões feitas</span>
+        <strong id="visitNote">Carregando...</strong>
+      </div>
+      <div class="footer-tag">Cookieverse 2077</div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toastMessage">Iniciando conexão com o portal...</div>
+  <script src="script.js"></script>
+</body>
+</html>
